@@ -7,6 +7,7 @@
 
 int main(void)
 {
+	/* the sentence to be printed exactly as it is to the console */
 	puts("\"Programming is like building a multilingual puzzle\n");
 	return (0);
 }

@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - prints the alphabet, with condition to skip some 
+ * main - prints the alphabet, with condition to skip some
  *
  * Return: Always 0(success)
  */
@@ -12,7 +12,7 @@ int main(void)
 
 	for (i = 97; i < 123; i++)
 	{
-		if (i == 'e' || i == 'q')
+		if (i == 'e' ||  == 'q')
 			continue;
 		putchar(i);
 	}

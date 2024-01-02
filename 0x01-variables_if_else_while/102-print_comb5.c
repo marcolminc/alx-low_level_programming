@@ -10,16 +10,16 @@ int main(void)
 {
 	int i, j;
 
-	for (i = 48; i < 58; i++)
+	for (i = 0; i < 100; i++)
 	{
-		for (j = i + 1; j < 58; j++)
+		for (j = i + 1; j < 100; j++)
 		{
-			putchar(i);
-			putchar(i);
+			putchar('0' + ((i >= 10) ? (i / 10) : 0));
+			putchar('0' + (i % 10));
 			putchar(' ');
-			putchar(i);
-			putchar(j);
-			if (i < 58 && j < 58)
+			putchar('0' + ((j >= 10) ? (j / 10) : 0));
+			putchar('0' + (j % 10));
+			if (i <98)
 			{
 				putchar(',');
 				putchar(' ');

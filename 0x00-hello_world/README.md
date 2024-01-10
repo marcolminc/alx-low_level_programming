@@ -1,2 +1,2 @@
-#0X00-HELLO_WORLD
-
+# 0X00-HELLO WORLD
+	Beginning low level programming, using C.

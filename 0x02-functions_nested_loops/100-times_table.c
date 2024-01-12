@@ -1,6 +1,5 @@
 #include "main.h"
 
-
 /**
  * pow_10 - computes powers of 10
  * @n: the exponent to compute power of 10 to
@@ -51,66 +50,36 @@ void print_num(int n)
 }
 
 /**
- * num_digits - computes number of digits a number has
- * @num: the number whose number of digits is computed
- *
- * Return: the number of digits
- */
-int num_digits(int num)
-{
-	int count;
-
-	count = 0;
-	do {
-		count++;
-		num /= 10;
-	} while (num > 0);
-	return (count);
-}
-
-/**
- * spacer - prints spaces to make sure product values of a times table
- * are in square.
- * @size: the number of digits of the largest product
- * @current: the number of digits of the current product
+ * print_times_table - prints n times table
+ * @n: number to print times tabl of
  *
  * Return: void
  */
-void spacer(int size, int current)
-{
-	while (current < size)
-	{
-		_putchar(' ');
-		current++;
-	}
-	_putchar(' ');
-}
 
-/**
- * print_times_table - prints times table of number (n), provided it
- * is greater than 0 and less or equal to 15.
- * @n: the number to print times table of.
- *
- * Return: void
- */
 void print_times_table(int n)
 {
-	int i, j, size;
+	int i, j, p;
 
-	if (n < 0 || n > 15)
-		return;
-	size = n * n;
 	for (i = 0; i <= n; i++)
 	{
 		for (j = 0; j <= n; j++)
 		{
-			print_num(i * j);
+			p = i * j;
+			if (p < 10)
+			{
+				if (j > 0)
+					_putchar(' ');
+				print_num(p);
+			}
+			else
+				print_num(p);
 			if (j < n)
 			{
 				_putchar(',');
-				spacer(num_digits(size), num_digits(i * j));
+				_putchar(' ');
 			}
 		}
 		_putchar('\n');
 	}
 }
+

@@ -51,7 +51,7 @@ void print_num(int num)
 	while (pow_10 > 1)
 	{
 		_putchar('0' + (num / pow_10));
-		num %= 10, pow_10 /= 10;
+		num %= pow_10, pow_10 /= 10;
 	}
 	_putchar('0' + (num % 10));
 }

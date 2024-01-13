@@ -31,10 +31,10 @@ void spacer(int size, int current)
 {
 	while (current < size)
 	{
-		putchar(' ');
+		_putchar(' ');
 		current++;
 	}
-	putchar(' ');
+	_putchar(' ');
 }
 
 /**
@@ -52,10 +52,10 @@ void print_num(int num)
 		pow_10 *= 10, temp_num /= 10;
 	while (pow_10 > 1)
 	{
-		putchar('0' + (num / pow_10));
+		_putchar('0' + (num / pow_10));
 		num %= 10, pow_10 /= 10;
 	}
-	putchar('0' + (num % 10));
+	_putchar('0' + (num % 10));
 }
 
 /**
@@ -75,13 +75,13 @@ void print_times_table(int n)
 	{
 		for (j = 0; j <= n; j++)
 		{
-			printf("%d", i*j);
+			print_num(i*j);
 			if (j < n)
 			{
-				putchar(',');
+				_putchar(',');
 				spacer(num_digits(size), num_digits(i*j));
 			}
 		}
-		putchar('\n');
+		_putchar('\n');
 	}
 }

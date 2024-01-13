@@ -11,7 +11,7 @@ int main(void)
 	unsigned int prev, next, temp, sum;
 	const unsigned int LIMIT = 4000000;
 
-	prev = 1, next = 2, temp = 0, sum = 0;
+	prev = 1, next = 2, temp = 0, sum = next;
 	while (temp < LIMIT)
 	{
 		temp = prev + next;

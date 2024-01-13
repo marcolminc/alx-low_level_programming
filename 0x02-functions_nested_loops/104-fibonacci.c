@@ -9,17 +9,18 @@
 int main(void)
 {
 	unsigned long int prev, next, sum;
-	int i, counter;
+	int i;
 
-	i = 3, prev = 1, next = 2, sum = 0, counter = 0;
+	i = 3, prev = 1, next = 2, sum = 0;
 	printf("%lu, %lu, ", prev, next);
 	for (; i <= 98; i++)
 	{
-		sum = prev + next, counter++;
+		sum = prev + next;
 		printf("%lu", sum);
 		if (i < 98)
 			printf(", ");
 		prev = next, next = sum;
 	}
-	printf("\ncounter: %d\n", counter);
+	putchar('\n');
+	return (0);
 }

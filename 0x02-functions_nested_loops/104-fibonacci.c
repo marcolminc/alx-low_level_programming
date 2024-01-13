@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <stdint.h>
-
 
 /**
  * main - prints first 98 elements of fibonacci series

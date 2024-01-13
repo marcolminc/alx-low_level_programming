@@ -75,13 +75,13 @@ void print_times_table(int n)
 	{
 		for (j = 0; j <= n; j++)
 		{
-			print_num(i*j);
-			if (j < n)
+			if (j > 0 && j <= n)
 			{
-				_putchar(',');
+				putchar(',');
 				spacer(num_digits(size), num_digits(i*j));
 			}
+			print_num(i * j);
 		}
-		_putchar('\n');
+		putchar('\n');
 	}
 }

@@ -29,6 +29,7 @@ int num_digits(int num)
 void spacer(int size, int current)
 {
 	int places, spaces;
+
 	places = size + 1, spaces = places - current;
 	while (spaces > 0)
 		putchar(' '), spaces--;

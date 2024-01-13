@@ -1,85 +1,87 @@
 #include "main.h"
 
 /**
- * pow_10 - computes powers of 10
- * @n: the exponent to compute power of 10 to
+ * num_digits - return the number of digits an integer has
+ * @num: the integer whose number of digits is required
  *
- * Return: powers of 10
+ * Return: the number of digits
  */
-int pow_10(int n)
+int num_digits(int num)
 {
-	int r;
+	int count;
 
-	r = 1;
-	if (n == 0)
-		return (r);
-	else if (n == 1)
-		return (10);
-	for (; n > 1; n--)
-		r *= 10;
-	return (r);
+	count = 0;
+	do
+	{
+		count++;
+		num /= 10;
+	} while	(num > 0);
+	return (count);
 }
 
 /**
- * print_num - prints the supplied number
- * @n: the numbe to be printed
+ * spacer - prints whitespaces according to largest number of digits 
+ * to square the times table
+ * @size: number of digits of the largest number
+ * @current: number of digits of the current number being printed
  *
  * Return: void
  */
-void print_num(int n)
+void spacer(int size, int current)
 {
-	int temp, size;
-
-	if (n < 0)
+	while (current < size)
 	{
-		_putchar('-');
-		n *= -1;
+		putchar(' ');
+		current++;
 	}
-	size = 0, temp = n;
-	while (temp > 10)
-	{
-		size++;
-		temp /= 10;
-	}
-	for (; size > 1; size--)
-	{
-		_putchar('0' + (n / pow_10(size)));
-		n %= pow_10(size);
-	}
-	_putchar('0' + (n % 10));
+	putchar(' ');
 }
 
 /**
- * print_times_table - prints n times table
- * @n: number to print times tabl of
+ * print_num - prints a positive integer, one digit at a time from left
+ * @num: the positive integer to be printed
  *
  * Return: void
  */
+void print_num(int num)
+{
+	int pow_10, temp_num;
 
+	pow_10 = 1, temp_num = num;
+	while (temp_num >= 10)
+		pow_10 *= 10, temp_num /= 10;
+	while (pow_10 > 1)
+	{
+		putchar('0' + (num / pow_10));
+		num %= 10, pow_10 /= 10;
+	}
+	putchar('0' + (num % 10));
+}
+
+/**
+ * print_times_table - prints times table of number n
+ * @n: the number to print times table of
+ *
+ * Return: void
+ */
 void print_times_table(int n)
 {
-	int i, j, p;
+	int i, j, size;
 
-	for (i = 0; i <= n; i++)
+	if (n < 0  || n > 15)
+		return;
+	size = n * n;
+	for (i = 0; i <= n; i++ )
 	{
 		for (j = 0; j <= n; j++)
 		{
-			p = i * j;
-			if (p < 10)
-			{
-				if (j > 0)
-					_putchar(' ');
-				print_num(p);
-			}
-			else
-				print_num(p);
+			printf("%d", i*j);
 			if (j < n)
 			{
-				_putchar(',');
-				_putchar(' ');
+				putchar(',');
+				spacer(num_digits(size), num_digits(i*j));
 			}
 		}
-		_putchar('\n');
+		putchar('\n');
 	}
 }
-

@@ -32,7 +32,7 @@ void spacer(int size, int current)
 
 	places = size + 1, spaces = places - current;
 	while (spaces > 0)
-		putchar(' '), spaces--;
+		_putchar(' '), spaces--;
 }
 
 /**

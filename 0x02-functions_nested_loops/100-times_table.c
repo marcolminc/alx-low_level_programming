@@ -11,8 +11,7 @@ int num_digits(int num)
 	int count;
 
 	count = 0;
-	do
-	{
+	do {
 		count++;
 		num /= 10;
 	} while	(num > 0);
@@ -20,7 +19,7 @@ int num_digits(int num)
 }
 
 /**
- * spacer - prints whitespaces according to largest number of digits 
+ * spacer - prints whitespaces according to largest number of digits
  * to square the times table
  * @size: number of digits of the largest number
  * @current: number of digits of the current number being printed
@@ -29,12 +28,10 @@ int num_digits(int num)
  */
 void spacer(int size, int current)
 {
-	while (current < size)
-	{
-		_putchar(' ');
-		current++;
-	}
-	_putchar(' ');
+	int places, spaces;
+	places = size + 1, spaces = places - current;
+	while (spaces > 0)
+		putchar(' '), spaces--;
 }
 
 /**
@@ -71,14 +68,14 @@ void print_times_table(int n)
 	if (n < 0  || n > 15)
 		return;
 	size = n * n;
-	for (i = 0; i <= n; i++ )
+	for (i = 0; i <= n; i++)
 	{
 		for (j = 0; j <= n; j++)
 		{
 			if (j > 0 && j <= n)
 			{
 				_putchar(',');
-				spacer(num_digits(size), num_digits(i*j));
+				spacer(num_digits(size), num_digits(i * j));
 			}
 			print_num(i * j);
 		}

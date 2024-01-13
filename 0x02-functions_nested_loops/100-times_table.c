@@ -77,11 +77,11 @@ void print_times_table(int n)
 		{
 			if (j > 0 && j <= n)
 			{
-				putchar(',');
+				_putchar(',');
 				spacer(num_digits(size), num_digits(i*j));
 			}
 			print_num(i * j);
 		}
-		putchar('\n');
+		_putchar('\n');
 	}
 }

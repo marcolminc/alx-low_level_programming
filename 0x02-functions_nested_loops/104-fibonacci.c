@@ -8,15 +8,15 @@
  */
 int main(void)
 {
-	uintmax_t prev, next, sum;
+	unsigned long long prev, next, sum;
 	int i;
 
 	i = 3, prev = 1, next = 2, sum = 0;
-	printf("%ju, %ju, ", prev, next);
+	printf("%llu, %llu, ", prev, next);
 	for (; i <= 98; i++)
 	{
 		sum = prev + next;
-		printf("%ju", sum);
+		printf("%llu", sum);
 		if (i < 98)
 			printf(", ");
 		prev = next, next = sum;

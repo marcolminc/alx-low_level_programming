@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * print_sqare - prints a square of desired size
+ * print_square - prints a square of desired size
  * @size: number of chars that form the square
  *
  * Return: void
  */
- void print_square(int size)
+void print_square(int size)
 {
 	int i, j;
 

@@ -10,15 +10,15 @@
 
 	if (size <= 0)
 	{
-		putchar('\n');
+		_putchar('\n');
 		return;
 	}
 	for (i = 1; i <= size; i++)
 	{
 		for (j = 1; j <= size; j++)
 		{
-			putchar('#');
+			_putchar('#');
 		}
-		putchar('\n');
+		_putchar('\n');
 	}
 }

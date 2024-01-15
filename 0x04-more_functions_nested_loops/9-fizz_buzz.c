@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
  * main - prints a fizz-buzz series
@@ -14,12 +15,12 @@ int main(void)
 		if (i % 3 == 0)
 			printf("Fizz");
 		else if (i % 5 == 0)
-			printf("Buzz");
+			_printf("Buzz");
 		else
-			printf("%d", i);
+			_printf("%d", i);
 		if (i < 100)
-			putchar(' ');
+			_putchar(' ');
 	}
-	putchar('\n');
+	_putchar('\n');
 	return (0);
 }

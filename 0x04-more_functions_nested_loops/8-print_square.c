@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * print_sqare - prints a square of desired size
  * @size: number of chars that form the square

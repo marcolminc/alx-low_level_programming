@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * print_triangle - prints a triangle to the right, using spaces and '#'s
+ * @size: the number specifying character-wise size of triangle
+ * Return: void
+ */
+
 void print_triangle(int size)
 {
 	int i, j;

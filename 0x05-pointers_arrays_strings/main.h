@@ -13,5 +13,6 @@ void puts2(char *);
 void print_array(int *, int);
 int _atoi(char *);
 char *_strcpy(char *, char *);
+void puts_half(char *);
 
 #endif

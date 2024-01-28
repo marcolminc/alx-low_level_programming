@@ -2,12 +2,12 @@
 
 
 /**
- * pow10 - computes powers of 10
+ * positioner - computes powers of 10
  * @i: the index to raise 10 to
  *
  * Return: the power of 10
  */
-int pow10(int i)
+int positioner(int i)
 {
 	int pow = 1, j;
 
@@ -48,7 +48,7 @@ int _atoi(char *s)
 	for (i = 0, j = digits - 1; i < pos; i++)
 	{
 		if (*(s + i) >= 48 && *(s + i) <= 57)
-			num += ((*(s + i) - 48) * pow10(j)), j--;
+			num += ((*(s + i) - 48) * positioner(j)), j--;
 	}
 	if (neg % 2 != 0)
 		num *= -1;

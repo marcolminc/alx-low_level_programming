@@ -11,5 +11,6 @@ void print_rev(char *);
 
 void puts2(char *);
 void print_array(int *, int);
+int _atoi(char *);
 
 #endif

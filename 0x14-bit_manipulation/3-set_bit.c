@@ -1,38 +1,22 @@
 #include "main.h"
 
 /**
- * binary_to_uint - function to converts a binary
- * number to an unsigned int.
- * @b: varibale contains binary.
- * Return: unsigned int.
- * mohamed amine
+ * set_bit - function to sets the value of a bit.
+ * @n: p of an und long int.
+ * @index: index of the bit.
+ * Return: 1 or -1.
+ * amine mohamed
  */
-unsigned int binary_to_uint(const char *b)
+int set_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned int n;
+	unsigned int f;
 
-	int L, bt;
+	if (index > 63)
+		return (-1);
 
-	if (!b)
-		return (0);
+	f = 1 << index;
+	*n = (*n | f);
 
-	n = 0;
-
-	for (L = 0; b[L] != '\0'; L++)
-		;
-	for (L--, bt = 1; L >= 0; L--, bt *= 2)
-	{
-		if (b[L] != '0' && b[L] != '1')
-		{
-			return (0);
-		}
-
-		if (b[L] & 1)
-		{
-			n += bt;
-		}
-	}
-
-	return (n);
+	return (1);
 }
 

@@ -13,6 +13,9 @@ size_t free_normal(listint_t **head)
 	size_t nodes;
 
 	nodes = 0;
+	if (*head == NULL)
+		return (nodes);
+
 	while (*head != NULL)
 	{
 		current = *head;
@@ -35,6 +38,8 @@ listint_t *find_loop(listint_t *head)
 	listint_t *slow, *fast;
 	int has_loop;
 
+	if (head == NULL)
+		return (NULL);
 	slow = head;
 	fast = head;
 	has_loop = 0;

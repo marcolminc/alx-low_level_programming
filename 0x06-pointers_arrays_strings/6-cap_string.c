@@ -16,7 +16,7 @@ char *cap_string(char *str)
 	i = 0;
 	while (*(str + i) != '\0')
 	{
-		for (j = 0; j < sizeof(delim); j++)
+		for (j = 0; j < (int)sizeof(delim); j++)
 		{
 			if (*(str + i) == delim[j])
 			{

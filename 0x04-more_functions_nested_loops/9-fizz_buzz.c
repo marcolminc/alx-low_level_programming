@@ -12,20 +12,20 @@ int main(void)
 
 	for (i = 1; i <= 100; i++)
 	{
-		if (i % 3 == 0)
+		if (i % 3 == 0 && i % 5 == 0)
 		{
 			if (i % 5 == 0)
-				printf("FizzBuzz" );
+				printf("FizzBuzz");
 			else
 				printf("Fizz");
 		}
 		else if (i % 5 == 0)
-			_printf("Buzz");
+			printf("Buzz");
 		else
-			_printf("%d", i);
+			printf("%d", i);
 		if (i < 100)
-			_putchar(' ');
+			putchar(' ');
 	}
-	_putchar('\n');
+	putchar('\n');
 	return (0);
 }

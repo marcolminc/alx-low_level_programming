@@ -5,20 +5,24 @@
  * @str: the string to process
  * Return: number of chars printed
  */
-int rot13(char *str)
+char *rot13(char *str)
 {
-	int i, numchar;
 	char c;
+	int i;
 
-	numchar = 0;
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		c = str[i];
 		if (c >= 'a' && c <= 'z')
+		{
 			c = ((c - 'a') + 13) % 26 + 'a';
+			str[i] = c;
+		}
 		else if (c >= 'A' && c <= 'Z')
+		{
 			c = ((c - 'A') + 13) % 26 + 'A';
-		numchar += _putchar(c);
+			str[i] = c;
+		}
 	}
-	return (numchar);
+	return (str);
 }

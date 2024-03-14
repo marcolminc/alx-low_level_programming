@@ -15,7 +15,7 @@ int _sqrt_recursion_helper(int n, int low, int high)
 
 	mid = (size_t)((low + high) / 2);
 	square = (int)(mid * mid);
-	if (square == n || mid == low)
+	if (square == n || (int)mid == low)
 		return (int)(mid);
 	else if (square < n)
 		return (_sqrt_recursion_helper(n, (int)mid, high));

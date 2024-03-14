@@ -7,22 +7,23 @@
  * @high: upper bound
  * Return: the square root
  */
-
 int _sqrt_recursion_helper(int n, int low, int high)
 {
-	int square;
-	size_t mid;
+	int mid, square;
 
-	mid = (size_t)((low + high) / 2);
-	square = (int)(mid * mid);
-	if (square == n || (int)mid == low)
-		return (int)(mid);
-	else if (square < n)
-		return (_sqrt_recursion_helper(n, (int)mid, high));
-	else
-		return (_sqrt_recursion_helper(n, low, (int)mid));
+	while (low <= high)
+	{
+		mid = low + (high - low) / 2;
+		square = mid * mid;
+		if (square == n)
+			return (mid);
+		else if (square < n)
+			low = mid + 1;
+		else
+			high = mid - 1;
+	}
+	return (high);
 }
-
 
 /**
  * _sqrt_recursion - computes natural square root of an int

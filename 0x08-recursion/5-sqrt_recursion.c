@@ -10,19 +10,17 @@
 int _sqrt_recursion_helper(int n, int low, int high)
 {
 	int mid, square;
-
-	while (low <= high)
-	{
-		mid = low + (high - low) / 2;
-		square = mid * mid;
-		if (square == n)
-			return (mid);
-		else if (square < n)
-			low = mid + 1;
-		else
-			high = mid - 1;
-	}
-	return (high);
+	
+	if (low > high)
+		return high;
+	mid = low + (high - low) / 2;
+	square = mid * mid;
+	if (square == n)
+		return mid;
+	else if (square < n)
+		return (_sqrt_recursion_helper(n, mid + 1, high));
+	else
+		return (_sqrt_recursion_helper(n, low, mid - 1));
 }
 
 /**

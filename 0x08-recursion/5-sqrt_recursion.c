@@ -10,13 +10,13 @@
 int _sqrt_recursion_helper(int n, int low, int high)
 {
 	int mid, square;
-	
+
 	if (low > high)
-		return high;
+		return (high);
 	mid = low + (high - low) / 2;
 	square = mid * mid;
 	if (square == n)
-		return mid;
+		return (mid);
 	else if (square < n)
 		return (_sqrt_recursion_helper(n, mid + 1, high));
 	else

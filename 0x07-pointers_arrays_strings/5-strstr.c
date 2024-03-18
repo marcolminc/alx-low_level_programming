@@ -24,9 +24,10 @@ char *_strstr(char *haystack, char *needle)
 				if (*(haystack + i) != *(needle + j))
 					match = 0;
 			}
-			if (match)
-				return (begin);
 		}
 	}
+	if (match)
+		return (begin);
+
 	return (NULL);
 }

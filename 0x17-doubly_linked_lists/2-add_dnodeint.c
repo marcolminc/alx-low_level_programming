@@ -10,7 +10,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
 	dlistint_t *new_node;
 
-	new_node = create_node(n);
+	new_node = create_node_2(n);
 	if (new_node == NULL)
 		return (NULL);
 	new_node->next = *head;
@@ -21,11 +21,11 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 }
 
 /**
- * create_node - creates a new dlist node
+ * create_node_2 - creates a new dlist node
  * @n: the value for the new node
  * Return: the pointer to the new node
  */
-dlistint_t *create_node(const int n)
+dlistint_t *create_node_2(const int n)
 {
 	dlistint_t *new_node;
 

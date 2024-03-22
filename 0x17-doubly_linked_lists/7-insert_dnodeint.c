@@ -10,14 +10,12 @@
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *new_node, *current;
-	int i;
+	unsigned int i;
 
-	if (idx < 0)
-		return (NULL);
 	if (*h == NULL && idx > 0)
 		return (NULL);
 	if (idx == 0)
-		return (add_dnodeint(*h, n));
+		return (add_dnodeint(h, n));
 	new_node = create_node(n);
 	current = *h;
 	i = 0;

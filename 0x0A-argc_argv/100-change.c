@@ -10,29 +10,25 @@
  */
 int main(int argc, char **argv)
 {
-	int cents, amount;
+	int cents, amount, i;
+	const int denominations[5] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
 	{
 		puts("Error");
 		return (1);
 	}
-	cents = 0;
 	amount = atoi(argv[1]);
 	if (amount < 0)
-		puts("0");
-	while (amount)
 	{
-		if (amount % 25 == 0)
-			cents++, amount -= 25;
-		else if (amount % 10 == 0)
-			cents++, amount -= 10;
-		else if (amount % 5 == 0)
-			cents++, amount -= 5;
-		else if (amount % 2 == 0)
-			cents++, amount -= 2;
-		else
-			cents++, amount--;
+		puts("0");
+		return (0);
+	}
+	cents = 0;
+	for (i = 0; i < 5 && amount > 0; i++)
+	{
+		cents += amount / denominations[i];
+		amount %= denominations[i];
 	}
 	printf("%d\n", cents);
 	return (0);

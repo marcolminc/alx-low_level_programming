@@ -12,11 +12,11 @@ int main(void)
 	int i;
 
 	i = 3, prev = 1, next = 2, sum = 0;
-	printf("%lu, %lu, ", prev, next);
+	printf("%llu, %llu, ", prev, next);
 	for (; i <= 98; i++)
 	{
 		sum = prev + next;
-		printf("%lu", sum);
+		printf("%llu", sum);
 		if (i < 98)
 			printf(", ");
 		prev = next, next = sum;

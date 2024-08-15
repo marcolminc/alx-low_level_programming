@@ -1,56 +1,30 @@
 #include "main.h"
 
-
 /**
- * positioner - computes powers of 10
- * @i: the index to raise 10 to
+ * _atoi - converts a string to an integer
+ * @s: the string to convert
  *
- * Return: the power of 10
- */
-int positioner(int i)
-{
-	int pow = 1, j;
-
-	if (i == 0)
-		return (pow);
-	for (j = i; j >= 1; j--)
-		pow *= 10;
-	return (pow);
-}
-
-/**
- * _atoi - converts a string to a number
- * @s: the string
- *
- * Return: the resulting number
+ * Return: the integer value of the string or 0 if NaN
  */
 int _atoi(char *s)
 {
-	int neg, i, j, pos, digits, num;
+	int sign, result, started;
 
-	neg = digits = num = 0;
-	for (i = 0; *(s + i) != '\0'; i++)
+	sign = 1, result = started = 0;
+	while (*s != '\0')
 	{
-		if (*(s + i) == '-')
-			neg++;
-		if (*(s + i) >= 48 && *(s + i) <= 57)
+		if (*s == '-' && !started)
+			sign = -sign;
+		else if (*s >= '0' && *s <= '9')
 		{
-			digits++;
-			if (*(s + i + 1) < 48  || *(s + i + 1) > 57)
-			{
-				pos = i + 1;
-				break;
-			}
+			started = 1;
+			if (result > (2147483647 - (*s - '0')) / 10)
+				return (sign == 1? 2147483647 : -2147483648);
+			result = result * 10 + (*s - '0');
 		}
+		else if (started)
+			break;
+		s++;
 	}
-	if (!digits)
-		return (0);
-	for (i = 0, j = digits - 1; i < pos; i++)
-	{
-		if (*(s + i) >= 48 && *(s + i) <= 57)
-			num += ((*(s + i) - 48) * positioner(j)), j--;
-	}
-	if (neg % 2 != 0)
-		num *= -1;
-	return (num);
+	return (result * sign);
 }

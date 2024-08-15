@@ -8,18 +8,19 @@
  */
 void print_number(int n)
 {
-	int pow_10, temp_num;
+	int pow_10;
+	unsigned int temp_num;
 
 	pow_10 = 1;
 	if (n < 0)
-		_putchar('-'), n *= -1;
-	temp_num = n;
-	while (temp_num > 9)
-		pow_10 *= 10, temp_num /= 10;
-	while (pow_10 > 1)
+		_putchar('-'), temp_num = -n;
+	else
+		temp_num = n;
+	while (temp_num / pow_10 > 9)
+		pow_10 *= 10;
+	while (pow_10 > 0)
 	{
-		_putchar('0' + (n / pow_10));
-		n %= pow_10, pow_10 /= 10;
+		_putchar('0' + (temp_num / pow_10));
+		temp_num %= pow_10, pow_10 /= 10;
 	}
-	_putchar('0' + (n % 10));
 }

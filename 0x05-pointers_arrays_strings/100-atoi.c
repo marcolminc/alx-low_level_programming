@@ -19,7 +19,7 @@ int _atoi(char *s)
 		{
 			started = 1;
 			if (result > (2147483647 - (*s - '0')) / 10)
-				return (sign == 1? 2147483647 : -2147483648);
+				return (sign == 1 ? 2147483647 : -2147483648);
 			result = result * 10 + (*s - '0');
 		}
 		else if (started)

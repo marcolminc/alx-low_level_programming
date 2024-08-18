@@ -1,6 +1,9 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+
+#include <limits.h>
+
 /* structures */
 /**
  * struct Leet - associative array of ecryption Leet

@@ -28,7 +28,7 @@ void print_buffer(char *b, int size)
 			if (i + offset < size)
 				printf("%02x", b[offset + i]);
 			else
-				printf(" ");
+				printf("  ");
 			if (i % 2)
 				printf(" ");
 		}

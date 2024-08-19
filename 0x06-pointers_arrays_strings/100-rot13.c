@@ -7,22 +7,20 @@
  */
 char *rot13(char *str)
 {
-	char c;
+	char c, base;
 	int i;
 
-	for (i = 0; str[i] != '\0'; i++)
+	i = 0;
+	while (*(str + i) != '\0')
 	{
-		c = str[i];
-		if (c >= 'a' && c <= 'z')
+		c = *(str + i);
+		if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 		{
-			c = ((c - 'a') + 13) % 26 + 'a';
-			str[i] = c;
+			base = 'A' + ((c >= 'a') * ('a' - 'A'));
+			c = (c - base + 13) % 26 + base;
+			*(str + i) = c;
 		}
-		else if (c >= 'A' && c <= 'Z')
-		{
-			c = ((c - 'A') + 13) % 26 + 'A';
-			str[i] = c;
-		}
+		i++;
 	}
 	return (str);
 }

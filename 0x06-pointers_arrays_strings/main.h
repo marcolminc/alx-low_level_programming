@@ -28,5 +28,7 @@ char *leet(char *);
 char *rot13(char *);
 void print_number(int n);
 char *infinite_add(char *, char*, char *, int);
+void print_buffer(char *, int);
+
 
 #endif

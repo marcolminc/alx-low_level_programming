@@ -3,7 +3,7 @@
 /**
  * rot13 - prints a string encoded in rot13
  * @str: the string to process
- * Return: number of chars printed
+ * Return: pointer to ciphered string.
  */
 char *rot13(char *str)
 {

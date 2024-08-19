@@ -9,7 +9,7 @@
 int str_len(char *str)
 {
 	int len;
-	
+
 	len = 0;
 	while (*(str++) != '\0')
 		len++;
@@ -21,7 +21,7 @@ int str_len(char *str)
  * @n2: the string for second number
  * @r: the buffer for the result (sum)
  * @size_r: the size of the result buffer
- * 
+ *
  * Return: r if sum fits in it, otherwise 0.
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
@@ -29,9 +29,9 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	int len1, len2, max_len, carry, i, j, k, sum;
 
 	len1 = str_len(n1), len2 = str_len(n2);
-	max_len = len1 > len2 ? len1: len2;
+	max_len = len1 > len2 ? len1 : len2;
 	if (max_len + 1 >= size_r)
-		return 0;
+		return (0);
 	carry = 0;
 	i = len1 - 1, j = len2 - 1, k = max_len;
 	r[k + 1] = '\0';

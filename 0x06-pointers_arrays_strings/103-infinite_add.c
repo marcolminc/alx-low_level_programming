@@ -53,5 +53,8 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			r[k + 1] = r[k];
 		r[0] = carry + '0';
 	}
+	if (r[0] == '0' && max_len > 1)
+		for (k = 0; r[k] != '\0'; k++)
+			r[k] = r[k + 1];
 	return (r);
 }

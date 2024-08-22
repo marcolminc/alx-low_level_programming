@@ -29,10 +29,14 @@ void print_all(const char * const format, ...)
 				break;
 			case 's':
 				s = va_arg(ap, char*);
-				if (s)
-					printf("%s", s);
-				else
-					printf("%s", nil);
+				switch ((uintptr_t)s)
+				{
+					case 0:
+						printf("%s\n", nil);
+						break;
+					default:
+						printf("%s", s);
+				}
 				break;
 			default:
 				break;

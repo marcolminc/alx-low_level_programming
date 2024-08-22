@@ -1,22 +1,24 @@
 #include "variadic_functions.h"
-#include <stdio.h>
+
 
 /**
  * print_all - prints args based on specified type
  * @format: the format specifier
+ *
  * Return: void
  */
 void print_all(const char * const format, ...)
 {
-	int type_index;
+	int i;
 	char *s, *nil;
 	va_list ap;
 
-	nil = "(nil)", type_index = 0;
+	nil = "(nil)";
+	i = 0;
 	va_start(ap, format);
-	while (format[type_index] != '\0')
+	while (format && format[i])
 	{
-		switch (format[type_index])
+		switch (format[i])
 		{
 			case 'c':
 				printf("%c", va_arg(ap, int));
@@ -28,24 +30,18 @@ void print_all(const char * const format, ...)
 				printf("%f", va_arg(ap, double));
 				break;
 			case 's':
-				s = va_arg(ap, char*);
-				switch ((uintptr_t)s)
-				{
-					case 0:
-						printf("%s\n", nil);
-						break;
-					default:
-						printf("%s", s);
-				}
+				s = va_arg(ap, char *);
+				if (!s)
+					s = nil;
+				printf("%s", s);
 				break;
 			default:
-				break;
+				i++;
+				continue;
 		}
-		if (format[type_index + 1] != '\0' && (format[type_index] == 'c'
-			|| format[type_index] == 'i' || format[type_index] == 'f'
-			|| format[type_index] == 's'))
+		if (format[i + 1])
 			printf(", ");
-		type_index++;
+		i++;
 	}
 	printf("\n");
 	va_end(ap);

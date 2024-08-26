@@ -23,6 +23,24 @@ int num_rows(char *str)
 
 
 /**
+ * free_arr - frees current malloc'ed rows
+ * @arr: the array of words
+ * @idx: current index of mallo'ed words
+ *
+ * Return: void
+ */
+void free_arr(char **arr, int idx)
+{
+	int i;
+
+	for (i = 0; i < idx;  i++)
+		free(arr[i]);
+	free(arr);
+}
+
+
+
+/**
  * strtow - creates array (2-D) of words from a string, space-separated
  * @str: the string to extract words from
  *
@@ -39,6 +57,8 @@ char **strtow(char *str)
 	while (*str == ' ')
 		str++;
 	rows = num_rows(str);
+	if (rows == 0)
+		return (NULL);
 	arr = malloc((rows + 1) * sizeof(char *));
 	if (arr)
 	{
@@ -55,7 +75,10 @@ char **strtow(char *str)
 					arr[k++][l] = '\0';
 				}
 				else
+				{
+					free_arr(arr, k);
 					return (NULL);
+				}
 				i++, cols = 0;
 			}
 			while (str[i] == ' ' && str[i + 1] == ' ')

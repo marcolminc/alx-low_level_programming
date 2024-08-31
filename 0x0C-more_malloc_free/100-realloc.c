@@ -37,5 +37,6 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	temp1 = ptr, temp2 = ptrr;
 	for (i = 0; i < lim; i++)
 		temp2[i] = temp1[i];
+	free(ptr);
 	return (ptrr);
 }

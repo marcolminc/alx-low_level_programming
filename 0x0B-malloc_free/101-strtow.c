@@ -2,90 +2,77 @@
 
 
 /**
- * num_rows - computes the number of rows for the array of words
- * @str: the string to extract from words, space-separated
+ * word_count - counts the number of words in a string
+ * @str: the string to evaluate
  *
- * Return: number of rows
+ * Return: the number of words
  */
-int num_rows(char *str)
+int word_count(char *str)
 {
-	int i, rows;
+	int count, in_word;
 
-	for (i = 0, rows = 0; *(str + i) != '\0'; i++)
+	count = in_word = 0;
+	while (*str)
 	{
-		if (str[i + 1] == ' ' || str[i + 1] == '\0')
-			i++, rows++;
-		while (str[i] == ' ' && str[i++ + 1] == ' ')
-			i++;
+		if (*str != ' ' && in_word == 0)
+		{
+			in_word = 1;
+			count++;
+		}
+		else if (*str == ' ')
+			in_word = 0;
+		str++;
 	}
-	return (rows);
+	return (count);
 }
 
 
 /**
- * free_arr - frees current malloc'ed rows
- * @arr: the array of words
- * @idx: current index of mallo'ed words
- *
- * Return: void
- */
-void free_arr(char **arr, int idx)
-{
-	int i;
-
-	for (i = 0; i < idx;  i++)
-		free(arr[i]);
-	free(arr);
-}
-
-
-
-/**
- * strtow - creates array (2-D) of words from a string, space-separated
- * @str: the string to extract words from
+ * strtow - splits a string into words
+ * @str: the string to split
  *
  * Return: the array of words
  */
 char **strtow(char *str)
 {
-	int i, rows, cols, j, k, l;
-	char **arr;
+	char **words, *word;
+	int i, j, k, word_len, wordc;
 
-	rows = k = 0;
 	if (str == NULL || *str == '\0')
 		return (NULL);
-	while (*str == ' ')
-		str++;
-	rows = num_rows(str);
-	if (rows == 0)
+	wordc = word_count(str);
+	if (wordc == 0)
 		return (NULL);
-	arr = malloc((rows + 1) * sizeof(char *));
-	if (arr)
+	words = malloc((wordc + 1) * sizeof(char *));
+	if (words == NULL)
+		return (NULL);
+	for (i = 0, j = word_len = 0; i <= wordc; i++)
 	{
-		for (i = 0, cols = 0; *(str + i) != '\0'; i++)
+		if (str[j] == ' ' || str[j] == '\0')
 		{
-			cols++;
-			if (str[i + 1] == ' ' || str[i + 1] == '\0')
+			if (word_len > 0)
 			{
-				j = i - (cols - 1), l = 0, arr[k] = malloc((cols + 1) * sizeof(char));
-				if (arr[k])
+				word = malloc((word_len + 1) * sizeof(char));
+				if (word == NULL)
 				{
-					while (j <= i)
-						arr[k][l++] = str[j++];
-					arr[k++][l] = '\0';
-				}
-				else
-				{
-					free_arr(arr, k);
+					for (k = 0; k < i; k++)
+						free(words[k]);
+					free(words);
 					return (NULL);
 				}
-				i++, cols = 0;
+				words[i - 1] = word, word[word_len] = '\0';
+				word_len = 0;
 			}
-			while (str[i] == ' ' && str[i + 1] == ' ')
-				i++;
+			j++;
 		}
-		arr[k] = NULL;
-		return (arr);
+		else
+		{
+			if (word_len == 0)
+				word = &str[j];
+			word_len++;
+			j++;
+		}
 	}
-	return (NULL);
+	words[wordc] = NULL;
+	return (words);
 }

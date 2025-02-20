@@ -20,7 +20,7 @@ int main(void)
 	if (n > 5)
 		printf("greater that 5\n");
 	else if (n == 0)
-		printf("zero\n");
+		printf("0\n");
 	else if (n != 0 && n < 6)
 		printf("less that 6 and not 0\n");
 

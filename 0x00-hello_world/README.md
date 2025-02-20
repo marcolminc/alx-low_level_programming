@@ -6,4 +6,5 @@ Table of contents:
 4. 3-name
 5. 4-puts
 6. 5-printf
+7. 6-size
 

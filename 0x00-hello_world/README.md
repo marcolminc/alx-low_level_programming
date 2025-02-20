@@ -5,3 +5,5 @@ Table of contents:
 3. 2-assembler
 4. 3-name
 5. 4-puts
+6. 5-printf
+

@@ -7,4 +7,5 @@ Table of contents:
 5. 4-puts
 6. 5-printf
 7. 6-size
+8. 100-intel
 

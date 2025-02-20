@@ -4,4 +4,4 @@ Table of contents:
 2. 1-compiler
 3. 2-assembler
 4. 3-name
-
+5. 4-puts

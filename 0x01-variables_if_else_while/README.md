@@ -6,4 +6,5 @@ Table of contents:
 4. 3-print_alphabets
 5. 4-print_alphabt
 6. 5-print_numbers
+7. 6-print_numberz
 

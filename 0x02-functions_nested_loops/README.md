@@ -5,4 +5,6 @@ Table of contents:
 3. 2-print_alphabet_x10
 4. 3-islower
 5. 4-isalpha
+6. 5-sign
+
 

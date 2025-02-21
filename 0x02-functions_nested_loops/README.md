@@ -4,4 +4,5 @@ Table of contents:
 2. 1-alphabet
 3. 2-print_alphabet_x10
 4. 3-islower
+5. 4-isalpha
 

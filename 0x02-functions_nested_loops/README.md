@@ -9,4 +9,6 @@ Table of contents:
 7. 6-abs
 8. 7-print_last_digit
 9. 8-24_hours
+10. 9-times_table
+
 

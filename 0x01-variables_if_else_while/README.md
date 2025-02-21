@@ -10,3 +10,5 @@ Table of contents:
 8. 7-print_tebahpla
 9. 8-print_base16
 10. 9-print_comb
+11. 100-print_comb3
+

@@ -11,4 +11,5 @@ Table of contents:
 9. 8-print_base16
 10. 9-print_comb
 11. 100-print_comb3
+12. 101-print_comb4
 

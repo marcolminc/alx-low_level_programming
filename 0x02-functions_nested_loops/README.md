@@ -8,5 +8,5 @@ Table of contents:
 6. 5-sign
 7. 6-abs
 8. 7-print_last_digit
-
+9. 8-24_hours
 

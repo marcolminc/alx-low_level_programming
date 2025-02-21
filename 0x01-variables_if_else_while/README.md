@@ -9,4 +9,4 @@ Table of contents:
 7. 6-print_numberz
 8. 7-print_tebahpla
 9. 8-print_base16
-
+10. 9-print_comb

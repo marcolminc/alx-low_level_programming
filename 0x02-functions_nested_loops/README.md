@@ -6,5 +6,6 @@ Table of contents:
 4. 3-islower
 5. 4-isalpha
 6. 5-sign
+7. 6-abs
 
 

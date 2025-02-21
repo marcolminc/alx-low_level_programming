@@ -7,5 +7,6 @@ Table of contents:
 5. 4-isalpha
 6. 5-sign
 7. 6-abs
+8. 7-print_last_digit
 
 

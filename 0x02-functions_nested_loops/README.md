@@ -13,5 +13,6 @@ Table of contents:
 11. 10-add
 12. 11-print_to_98
 13. 100-times_table
+14. 101-natural
 
 

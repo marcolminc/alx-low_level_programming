@@ -12,7 +12,7 @@ int main(void)
 
 	prev = 1, curr = 2, nxt = 0;
 	printf("%lu, %lu, ", prev, curr);
-	for (i = 1; i <=48; i++)
+	for (i = 1; i <= 48; i++)
 	{
 		nxt = prev + curr;
 		prev = curr, curr = nxt;

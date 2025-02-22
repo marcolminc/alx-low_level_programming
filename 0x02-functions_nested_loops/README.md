@@ -14,5 +14,6 @@ Table of contents:
 12. 11-print_to_98
 13. 100-times_table
 14. 101-natural
+15. 102-fibonacci
 
 

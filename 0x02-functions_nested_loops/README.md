@@ -12,4 +12,6 @@ Table of contents:
 10. 9-times_table
 11. 10-add
 12. 11-print_to_98
+13. 100-times_table
+
 

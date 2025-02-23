@@ -8,4 +8,5 @@ Table of contents
 6. 5-more_numbers
 7. 6-print_line
 8. 7-print_diagonal
+9. 8-print_square
 

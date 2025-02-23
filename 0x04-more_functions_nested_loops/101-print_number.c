@@ -1,4 +1,5 @@
 #include "main.h"
+#include <unistd.h>
 
 
 /**
@@ -9,12 +10,15 @@
  */
 void print_number(int n)
 {
-	if (n < 0)
+	__int128_t i;
+
+	i = n;
+	if (i < 0)
 	{
 		_putchar('-');
-		n *= -1;
+		i *= -1;
 	}
-	if (n > 9)
-		print_number(n / 10);
-	_putchar('0' + (n % 10));
+	if (i > 9)
+		print_number(i / 10);
+	_putchar('0' + (i % 10));
 }

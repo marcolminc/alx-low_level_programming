@@ -10,4 +10,6 @@ Table of contents
 8. 7-print_diagonal
 9. 8-print_square
 10. 9-fizz_buzz
-
+11. 10-print_triangle
+12. 100-prime_factor
+13. 101-print_number

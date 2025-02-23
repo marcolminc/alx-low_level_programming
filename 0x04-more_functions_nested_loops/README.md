@@ -6,4 +6,5 @@ Table of contents
 4. 3-print_numbers
 5. 4-print_most_numbers
 6. 5-more_numbers
+7. 6-print_line
 

@@ -9,4 +9,5 @@ Table of contents
 7. 6-print_line
 8. 7-print_diagonal
 9. 8-print_square
+10. 9-fizz_buzz
 

@@ -6,4 +6,5 @@ Table of contents
 4. 3-puts
 5. 4-print_rev
 6. 5-rev_string
+7. 6-puts2
 

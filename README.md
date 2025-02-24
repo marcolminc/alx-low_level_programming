@@ -5,4 +5,5 @@
 3. 0x02. C - Functions, Nested Loops
 4. 0x03. C - Debugging
 5. 0x04. C - More functions, more Nested Loops
+6. 0x05. C - Pointers, Arrays and Strings
 

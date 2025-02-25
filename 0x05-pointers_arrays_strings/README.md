@@ -9,4 +9,5 @@ Table of contents
 7. 6-puts2
 8. 7-puts_half
 9. 8-print_array
+10. 9-strcpy
 

@@ -8,4 +8,5 @@ Table of contents
 6. 5-rev_string
 7. 6-puts2
 8. 7-puts_half
+9. 8-print_array
 

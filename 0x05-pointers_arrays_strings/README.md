@@ -7,4 +7,5 @@ Table of contents
 5. 4-print_rev
 6. 5-rev_string
 7. 6-puts2
+8. 7-puts_half
 

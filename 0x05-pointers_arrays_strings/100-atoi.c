@@ -1,4 +1,5 @@
 #include "main.h"
+#include <sys/types.h>
 
 
 /**
@@ -20,7 +21,8 @@ int _isdigit(char c)
  */
 int _atoi(char *s)
 {
-	int num, in, neg;
+	int in, neg;
+	ssize_t num;
 
 	num = in = neg = 0;
 	while (s && *s != '\0')

@@ -10,4 +10,5 @@ Table of contents
 8. 7-puts_half
 9. 8-print_array
 10. 9-strcpy
+11. 100-atoi
 

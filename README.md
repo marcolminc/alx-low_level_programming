@@ -6,4 +6,5 @@
 4. 0x03. C - Debugging
 5. 0x04. C - More functions, more Nested Loops
 6. 0x05. C - Pointers, Arrays and Strings
+7. 0x06. C - More Pointers, Arrays and Strings
 

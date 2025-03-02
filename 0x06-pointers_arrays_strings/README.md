@@ -5,4 +5,6 @@ Table of contents:
 3. 2-strncpy
 4. 3-strcmp
 5. 4-rev_array
+6. 5-string_toupper
+
 

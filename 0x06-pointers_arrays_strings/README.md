@@ -6,5 +6,6 @@ Table of contents:
 4. 3-strcmp
 5. 4-rev_array
 6. 5-string_toupper
+7. 6-cap_string
 
 

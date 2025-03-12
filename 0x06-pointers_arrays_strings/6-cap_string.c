@@ -14,7 +14,9 @@ char *cap_string(char *str)
 {
 	int i;
 
-	for (i = 0; str && *(str + i) != '\0'; i++)
+	i = 0;
+	to_upper(str + i);
+	for (; str && *(str + i) != '\0'; i++)
 	{
 		if (is_delim(*(str + i)) && *(str + i + 1) != '\0')
 		{

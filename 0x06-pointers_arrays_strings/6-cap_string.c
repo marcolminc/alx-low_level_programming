@@ -21,7 +21,7 @@ char *cap_string(char *str)
 			i++;
 			while (is_delim(*(str + i)) && *(str + i + 1) != '\0')
 				i++;
-				to_upper((str + i));
+			to_upper((str + i));
 		}
 	}
 	return (str);

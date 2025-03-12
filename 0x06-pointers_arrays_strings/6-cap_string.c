@@ -39,8 +39,8 @@ int is_delim(char c)
 	int i;
 
 	for (i = 0; *(DELIMETERS + i) != '\0'; i++)
-	if (*(DELIMETERS + i) == c)
-		return (1);
+		if (*(DELIMETERS + i) == c)
+			return (1);
 	return (0);
 }
 

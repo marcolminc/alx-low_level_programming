@@ -7,5 +7,5 @@ Table of contents:
 5. 4-rev_array
 6. 5-string_toupper
 7. 6-cap_string
-
+8. 7-leet
 

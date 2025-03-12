@@ -9,7 +9,7 @@
  */
 void print_number(int n)
 {
-	__int64_t num;
+	__int128_t num;
 
 	num = n;
 	if (num < 0)

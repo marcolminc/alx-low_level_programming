@@ -8,4 +8,7 @@ Table of contents:
 6. 5-string_toupper
 7. 6-cap_string
 8. 7-leet
+9. 100-rot13
+10. 100-rot13
+11. 101-print_number
 

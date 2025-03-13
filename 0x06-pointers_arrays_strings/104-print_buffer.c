@@ -16,7 +16,7 @@ void print_buffer(char *b, int size)
 	if (size <= 0)
 		putchar('\n');
 	full = size / 10, less = size % 10, j = 0;
-	for (i = 0; i < size; i++) 
+	for (i = 0; i < size; i++)
 	{
 		j++;
 		if (j % 10 == 1)

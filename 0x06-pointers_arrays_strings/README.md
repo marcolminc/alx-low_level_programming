@@ -9,6 +9,7 @@ Table of contents:
 7. 6-cap_string
 8. 7-leet
 9. 100-rot13
-10. 100-rot13
-11. 101-print_number
-
+10. 101-print_number
+11. 102-magic
+12. 103
+13. 104-print_buffer 

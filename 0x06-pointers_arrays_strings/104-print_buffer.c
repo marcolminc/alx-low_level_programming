@@ -14,7 +14,10 @@ void print_buffer(char *b, int size)
 	char *in;
 
 	if (size <= 0)
+	{
 		putchar('\n');
+		return;
+	}
 	full = size / 10, less = size % 10, j = 0;
 	for (i = 0; i < size; i++)
 	{
@@ -28,12 +31,10 @@ void print_buffer(char *b, int size)
 		{
 			full--;
 			for (k = 0; k < 10; k++)
-			{
 				if (*(in + k) < 0x20 || *(in + k) > 0x7e)
 					putchar('.');
 				else
 					putchar(*(in + k));
-			}
 			putchar('\n');
 		}
 	}

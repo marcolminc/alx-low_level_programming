@@ -15,6 +15,11 @@ void print_buffer(char *b, int size)
 	int i, chunk_offset;
 	char c;
 
+	if (size <= 0)
+	{
+		putchar('\n');
+		return;
+	}
 	for (chunk_offset = 0; chunk_offset < size; chunk_offset += 10)
 	{
 		printf("%08x: ", chunk_offset);

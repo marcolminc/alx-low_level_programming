@@ -1,5 +1,7 @@
+#include <ctype.h>
 #include "main.h"
 #include <stdio.h>
+
 
 /**
  * print_buffer - prints a (char) buffer
@@ -10,43 +12,27 @@
  */
 void print_buffer(char *b, int size)
 {
-	int i, j, k, full, less;
-	char *in;
+	int i, chunk_offset;
+	char c;
 
-	if (size <= 0)
+	for (chunk_offset = 0; chunk_offset < size; chunk_offset += 10)
 	{
-		putchar('\n');
-		return;
-	}
-	full = size / 10, less = size % 10, j = 0;
-	for (i = 0; i < size; i++)
-	{
-		j++;
-		if (j % 10 == 1)
-			in = (b + i), printf("%08x: ", i);
-		printf("%02x", *(b + i));
-		if (j % 2 == 0)
-			putchar(' ');
-		if (j % 10 == 0)
+		printf("%08x: ", chunk_offset);
+		for (i = 0; i < 10; i++)
 		{
-			full--;
-			for (k = 0; k < 10; k++)
-				if (*(in + k) < 0x20 || *(in + k) > 0x7e)
-					putchar('.');
-				else
-					putchar(*(in + k));
-			putchar('\n');
-		}
-	}
-	if (full == 0)
-	{
-		for (k = 0; k < (10 - less) * 2 + (10 - less) / 2; k++)
-			putchar(' ');
-		for (k = 0; k < less; k++)
-			if (*(in + k) < 0x20 || *(in + k) > 0x7e)
-				putchar('.');
+			if (i + chunk_offset < size)
+				printf("%02x", *(b + chunk_offset + i));
 			else
-				putchar(*(in + k));
+				printf("  ");
+			if (i % 2)
+				putchar(' ');
+		}
+		for (i = 0; i < 10; i++)
+			if (chunk_offset + i < size)
+			{
+				c = *(b + chunk_offset + i);
+				putchar((isprint(c)) ? c : '.');
+			}
 		putchar('\n');
 	}
 }

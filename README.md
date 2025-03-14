@@ -10,4 +10,4 @@
 8. 0x07. C - Even More Pointers, Arrays and Strings
 9. 0x08. C -
 10. 0x09. C - Static Libraries
-
+11. 0x0A. C - Argc, Argv

@@ -23,17 +23,15 @@ int _isalpha(char c)
 char *rot13(char *str)
 {
 	int i;
-	char c;
+	char c, base;
 
 	for (i = 0; str && *(str + i) != '\0'; i++)
 	{
 		while (!_isalpha(*(str + i)))
 			i++;
 		c = *(str + i);
-		if (c >= 'a' && c <= 'z')
-			*(str + i) = (((c - 'a') + 13) % 26) + 'a';
-		else
-			*(str + i) = (((c - 'A') + 13) % 26) + 'A';
+		base = 'A' + (c >= 'a') * ('a' - 'A');
+		*(str + i) = (((c - base) + 13) % 26) + base;
 	}
 	return (str);
 }

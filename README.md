@@ -7,5 +7,7 @@
 5. 0x04. C - More functions, more Nested Loops
 6. 0x05. C - Pointers, Arrays and Strings
 7. 0x06. C - More Pointers, Arrays and Strings
-8. 0x07. c - Even More Pointers, Arrays and Strings
+8. 0x07. C - Even More Pointers, Arrays and Strings
+9. 0x08. C -
+10. 0x09. C - Static Libraries
 

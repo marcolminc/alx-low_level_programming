@@ -1,7 +1,7 @@
 # ALX Low Level Programming.
 ## Projects:
 1. 0x00. C - Hello, World
-2. 0x01. C - Variables, if_else, While
+2. 0x01. C - Variables, If-Else, While
 3. 0x02. C - Functions, Nested Loops
 4. 0x03. C - Debugging
 5. 0x04. C - More functions, more Nested Loops
@@ -11,3 +11,7 @@
 9. 0x08. C -
 10. 0x09. C - Static Libraries
 11. 0x0A. C - Argc, Argv
+12. 0x0B. C - 
+13. 0x0C. C - 
+14. 0x0D. C - Preprocessor
+

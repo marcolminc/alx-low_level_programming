@@ -1,16 +1,15 @@
-#include "main.h" 
+#include "main.h"
 
 /**
- * main - prints the number of CLI args
- * @argc: number of CLI args
- * @argv: vector of CLI args
- *
- * Return: nothing
+ * main - prints the number of args passed to it
+ * @argc: the  number of args
+ * @argv: the array of args
+ * Return: exit status (0 for success)
  */
 int main(int argc, char **argv)
 {
-	(void) argv;
-	printf("%d\n", argc - 1);
+	(void)argv;
 
+	printf("%d\n", argc - 1);
 	return (0);
 }

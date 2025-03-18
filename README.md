@@ -8,7 +8,7 @@
 6. 0x05. C - Pointers, Arrays and Strings
 7. 0x06. C - More Pointers, Arrays and Strings
 8. 0x07. C - Even More Pointers, Arrays and Strings
-9. 0x08. C -
+9. 0x08. C - Recursion
 10. 0x09. C - Static Libraries
 11. 0x0A. C - Argc, Argv
 12. 0x0B. C - 

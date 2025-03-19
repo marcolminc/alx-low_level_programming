@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdint.h>
 
 
 /**
@@ -9,9 +10,9 @@
  *
  * Return: the square root, -1 otherwise
  */
-int _sqrt_helper(int n, int lo, int hi)
+int _sqrt_helper(__uint64_t n, __uint64_t lo, __uint64_t hi)
 {
-	int md;
+	__uint64_t md;
 
 	md = (lo + hi) / 2;
 	if (md * md == n)
@@ -33,5 +34,7 @@ int _sqrt_recursion(int n)
 {
 	if (n < 0)
 		return (-1);
+	if (n == 1)
+		return (1);
 	return (_sqrt_helper(n, 0, n / 2));
 }

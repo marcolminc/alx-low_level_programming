@@ -5,5 +5,6 @@ Table of contents:
 3. 2 - strlen recursion
 4. 3 - factorial
 5. 4 - surd recursion
+6. 5 - sqrt recursion
 
 

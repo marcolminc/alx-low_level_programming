@@ -6,5 +6,6 @@ Table of contents:
 4. 3 - factorial
 5. 4 - surd recursion
 6. 5 - sqrt recursion
+7. 6 - is prime number
 
 

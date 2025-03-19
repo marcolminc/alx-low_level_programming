@@ -7,5 +7,6 @@ Table of contents:
 5. 4 - surd recursion
 6. 5 - sqrt recursion
 7. 6 - is prime number
+8. 100 - is palindrome
 
 

@@ -3,40 +3,29 @@
 
 
 /**
- * _strlen - finds length of a string
- * @s: given string to measure
- *
- * Return: length of s
- */
-int _strlen(char *s)
-{
-	if (!s || *s == '\0')
-		return (0);
-	return (1 + _strlen(s + 1));
-}
-
-
-/**
  * _strcpy - copies a string into a new buffer (heap)
  * @src: source string
  *
  * Return: dest string buffer
  */
-char  *_strcpy(char *src)
+char  *_strdup(char *src)
 {
-	int i, len;
+	size_t i, len;
 	char *dest;
 
 	dest = NULL;
-	if (!src)
-		return (dest);
-	len = _strlen(src);
-	dest = malloc(len * sizeof(char) + 1);
-	if (!dest)
-		return (dest);
-	for (i = 0; i < len - 1; i++)
-		*(dest + i) = *(src + i);
-	*(dest + i) = '\0';
+	if (src)
+	{
+		len = 0;
+		while (*(src + len) != '\0')
+			len++;
+		dest = malloc((len + 1) * sizeof(char));
+		if (!dest)
+			return (dest);
+		for (i = 0; i < len; i++)
+			*(dest + i) = *(src + i);
+		*(dest + i) = '\0';
+	}
 	return (dest);
 }
 
@@ -51,8 +40,7 @@ char  *_strcpy(char *src)
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	char *name_cpy;
-	char *owner_cpy;
+	char *name_cpy, *owner_cpy;
 	dog_t *new;
 
 	name_cpy = _strcpy(name);

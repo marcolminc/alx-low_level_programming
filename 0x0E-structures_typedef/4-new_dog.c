@@ -3,7 +3,7 @@
 
 
 /**
- * _strcpy - copies a string into a new buffer (heap)
+ * strdup - copies a string into a new buffer (heap)
  * @src: source string
  *
  * Return: dest string buffer
@@ -43,10 +43,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 	char *name_cpy, *owner_cpy;
 	dog_t *new;
 
-	name_cpy = _strcpy(name);
+	name_cpy = _strdup(name);
 	if (!name_cpy)
 		return (NULL);
-	owner_cpy = _strcpy(owner);
+	owner_cpy = _strdup(owner);
 	if (!owner_cpy)
 	{
 		free(name_cpy);

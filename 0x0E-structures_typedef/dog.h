@@ -11,12 +11,12 @@
  * Description: This structure is an object for storing information
  * about a dog and its ownership.
  */
-struct dog
+typedef struct dog
 {
 	char *name;
 	char *owner;
 	float age;
-};
+} dog_t;
 
 
 /* prototypes */

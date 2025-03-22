@@ -11,5 +11,5 @@ Table of contents:
 9. 100-rot13
 10. 101-print_number
 11. 102-magic
-12. 103
+12. 103 - infinite_add
 13. 104-print_buffer 

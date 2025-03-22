@@ -29,22 +29,21 @@ int _strlen(char *s)
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 	int i, j, k, len1, len2, max_len;
-	unsigned int sum, carry;
+	unsigned int sum;
 
 	len1 = _strlen(n1), len2 = _strlen(n2);
 	max_len = (len1 > len2) ? len1 : len2;
 	if (max_len + 1 >= size_r)
 		return (0);
 	i = len1 - 1, j = len2 - 1;
-	carry = 0, k = max_len;
+	sum = 0, k = max_len;
 	*(r + k + 1) = '\0';
 	while (k >= 0)
 	{
-		sum = carry;
 		sum += (i >= 0) ? *(n1 + i--) - '0' : 0;
 		sum += (j >= 0) ? *(n2 + j--) - '0' : 0;
 		*(r + k--) = (sum % 10) + '0';
-		carry = sum / 10;
+		sum /= 10;
 	}
 	if (*r == '0')
 	{

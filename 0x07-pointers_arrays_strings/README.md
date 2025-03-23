@@ -6,4 +6,5 @@ Table of Contents:
 4. 3 - strspn
 5. 4 - strpbrk
 6. 5 - strstr
-
+7. 7 - print chessboard
+8. 

@@ -7,4 +7,5 @@ Table of Contents:
 5. 4 - strpbrk
 6. 5 - strstr
 7. 7 - print chessboard
-8. 
+8. 8 - print diagsums
+ 

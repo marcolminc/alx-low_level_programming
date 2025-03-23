@@ -13,7 +13,7 @@ char *_strchr(char *s, char c)
 	unsigned int i;
 	char *res;
 
-	res = 0;
+	res = NULL;
 	for (i = 0; s && *(s + i); i++)
 		if (*(s + i) == c)
 		{

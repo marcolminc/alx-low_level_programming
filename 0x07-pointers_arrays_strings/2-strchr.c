@@ -9,7 +9,7 @@
  *
  * Return: pointer to location of c in s
  */
-char *_strchr_helper (char *s, char c)
+char *_strchr_helper(char *s, char c)
 {
 	if (*s == c)
 		return (s);
@@ -28,6 +28,6 @@ char *_strchr_helper (char *s, char c)
  */
 char *_strchr(char *s, char c)
 {
-	return (_strchr_helper (s, c));
+	return (_strchr_helper(s, c));
 }
 

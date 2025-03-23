@@ -5,4 +5,5 @@ Table of Contents:
 3. 2 - strchr
 4. 3 - strspn
 5. 4 - strpbrk
+6. 5 - strstr
 

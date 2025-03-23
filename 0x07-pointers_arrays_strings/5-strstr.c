@@ -14,6 +14,8 @@ char *_strstr(char *haystack, char *needle)
 	unsigned int i, j, k, found, broke;
 	char *res;
 
+	if (!needle || *needle == "")
+		return (haystack);
 	res = NULL, found = broke = 0;
 	for (i = 0; haystack && haystack[i]; i++)
 	{

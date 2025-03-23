@@ -4,4 +4,5 @@ Table of Contents:
 2. 1 - memcpy
 3. 2 - strchr
 4. 3 - strspn
+5. 4 - strpbrk
 

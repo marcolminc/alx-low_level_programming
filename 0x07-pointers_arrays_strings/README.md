@@ -8,4 +8,5 @@ Table of Contents:
 6. 5 - strstr
 7. 7 - print chessboard
 8. 8 - print diagsums
+9. 100 - set string
  

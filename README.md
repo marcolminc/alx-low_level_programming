@@ -11,8 +11,8 @@
 9. 0x08. C - Recursion
 10. 0x09. C - Static Libraries
 11. 0x0A. C - Argc, Argv
-12. 0x0B. C - 
-13. 0x0C. C - 
+12. 0x0B. C - Malloc, Free 
+13. 0x0C. C - More Malloc, Free
 14. 0x0D. C - Preprocessor
 15. 0x0E. C - Structures, Typedef 
 16. 0x0F. C - Function Pointers 

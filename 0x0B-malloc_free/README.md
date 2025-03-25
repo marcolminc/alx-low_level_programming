@@ -4,5 +4,6 @@ Table of contents:
 2. 1 - strdup
 3. 2 - str concat
 4. 3 - alloc grid
+5. 4 - free grid
 
 

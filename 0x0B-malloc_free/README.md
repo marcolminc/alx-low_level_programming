@@ -2,5 +2,6 @@
 Table of contents:
 1. 0 - create array
 2. 1 - strdup
+3. 2 - str concat
 
 

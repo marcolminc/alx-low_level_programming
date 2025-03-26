@@ -18,36 +18,6 @@ int _strlen(char *s)
 
 
 /**
- * str_concat - concatenates two strings into a buffer
- * @s1: first string
- * @s2: second string
- *
- * Return: pointer to the buffer containing concatenated s1 and s2
- * NULL, otherwise
- */
-char *str_concat(char *s1, char *s2)
-{
-	char *dest;
-	unsigned int size, i;
-
-	if (!s1)
-		s1 = "";
-	if (!s2)
-		s2 = "";
-	size = _strlen(s1) + _strlen(s2) + 1;
-	dest = malloc(size * sizeof(*dest));
-	if (dest)
-	{
-		for (i = 0; s1[i]; i++)
-			dest[i] = s1[i];
-		while (*s2)
-			dest[i++] = *s2++;
-	}
-	return (dest);
-}
-
-
-/**
  * argstostr - concatenates all (CLI) arguments of a program
  * @ac: number of (CLI) args passed
  * @av: vector of (CLI) args
@@ -56,31 +26,28 @@ char *str_concat(char *s1, char *s2)
  */
 char *argstostr(int ac, char **av)
 {
-	char *res, *temp;
-	int i, j, len;
+	char *res;
+	int i, j, k, len;
 
-	res = temp = NULL;
+	res = NULL;
 	if (!ac || !av)
 		return (res);
+	len = k = 0;
 	for (i = 0; i < ac; i++)
+		len += _strlen(av[i]) + 1;
+	len++;
+	if (len)
 	{
-		len = _strlen(av[i]);
-		if (len)
+		res = malloc(len * sizeof(char));
+		if (res)
 		{
-			temp = malloc((len + 2) * sizeof(char));
-			if (temp)
+			for (i = 0; i < ac; i++)
 			{
-				for (j = 0; j < len; j++)
-				{
-					temp[j] = av[i][j];
-				}
-				temp[j++] = '\n';
-				temp[j] = '\0';
-				res = str_concat(res, temp);
-				if (res)
-					free(temp);
-				temp = NULL;
+				for (j = 0; av[i][j]; j++)
+					res[k++] = av[i][j];
+				res[k++] = '\n';
 			}
+			res[k] = '\0';
 		}
 	}
 	return (res);

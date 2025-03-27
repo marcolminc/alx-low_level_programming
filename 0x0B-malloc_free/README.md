@@ -6,5 +6,5 @@ Table of contents:
 4. 3 - alloc grid
 5. 4 - free grid
 6. 100 - args to str
-
+7. 101 - strtow
 

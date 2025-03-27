@@ -2,6 +2,22 @@
 
 
 /**
+ * _strlen - finds length of a string
+ * @str: string to measure
+ *
+ * Return: lengthof str
+ */
+int _strlen(char *str)
+{
+	int i;
+
+	for (i = 0; str && str[i]; i++)
+		;
+	return (i);
+}
+
+
+/**
  * string_nconcat - concatenates two strings
  * @s1: first string
  * @s2: second string
@@ -23,7 +39,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	for (i = 0; s1[i]; i++)
 		res[i] = s1[i];
-	for (j = 0; j < n && s2[j]; j++)
+	for (j = 0; j < (int)n && s2[j]; j++)
 		res[i++] = s2[j];
 	res[i] = '\0';
 	return (res);

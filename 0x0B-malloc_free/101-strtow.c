@@ -71,6 +71,8 @@ char **strtow(char *str)
 
 	res = NULL;
 	words = count_words(str);
+	if (!words)
+		return (res);
 	i_w = k = 0;
 	res = malloc((words + 1) * sizeof(*res));
 	if (!res)

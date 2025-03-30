@@ -2,48 +2,37 @@
 
 
 /**
- * _puts - prints a string, followed by a new line
+ * _puts - custom printf for simply printing a string, followed by new line
  * @str: the string to print
  *
- * Return: nothing
+ * Return: void
  */
 void _puts(char *str)
 {
-	size_t i;
+	int i;
 
-	for (i = 0; str && str[i]; i++)
-		_putchar(str[i]);
+	if (str == NULL)
+	{
+		_putchar('\n');
+		return;
+	}
+	i = 0;
+	while (str[i] == '0' && str[i + 1] != '\0')
+		i++;
+	while (str[i])
+		_putchar(str[i++]);
 	_putchar('\n');
 }
 
-
 /**
- * _strlen - measures length of a string
- * @str: the string to measure
- *
- * Return: length of str
- */
-int _strlen(char *str)
-{
-	size_t i;
-
-	for (i = 0; str && str[i]; i++)
-		;
-	return ((int)i);
-}
-
-
-/**
- * is_num - checks whether a string is composed of digits only
+ * is_num - checks if a string is composed of digits only
  * @str: the string to check
  *
- * Return: 1 -> str is of digits only, 0 otherwise
+ * Return: 1 if all characters are digits, 0 otherwise
  */
 int is_num(char *str)
 {
-	if (!str || *str == '\0')
-		return (0);
-	while (*str != '\0')
+	while (*str)
 	{
 		if (*str < '0' || *str > '9')
 			return (0);
@@ -53,67 +42,64 @@ int is_num(char *str)
 }
 
 /**
- * _calloc - allocates an initialized array
- * @nmemb: number of members of the array
- * @size: size of each member of the array
+ * mul - multiplies two positive numbers, given as strings of decimal digits
+ * @num1: the first number (as a string)
+ * @num2: the second number (as a string)
  *
- * Return: the allocated array, NULL otherwise
+ * Return: the product (also, as a string)
  */
-void *_calloc(unsigned int nmemb, unsigned int size)
+char *mul(char *num1, char *num2)
 {
-	unsigned int i;
-	char *res;
+	int len1, len2, i, j, cy, n1, n2;
+	char *ptr;
 
-	if (!nmemb || !size)
-		return (NULL);
-	res = malloc(nmemb * size);
-	if (!res)
-		return (NULL);
-	for (i = 0; i < nmemb * size; i++)
-		res[i] = 0;
-	return ((void *)res);
-}
-
-
-/**
- * main - multiplies two positive numbers
- * @argc: number of CLI args passed
- * @argv: vector of CLI args passed
- *
- * Return: 0 -> success, > 0 otherwise
- */
-int main(int argc, char **argv)
-{
-	ssize_t i, j, k, plc_v, prod;
-	ssize_t size_1, size_2, size_res;
-	int *res;
-
-	if (argc != 3 || !is_num(argv[1]) || !is_num(argv[2]))
+	for (len1 = 0; num1[len1]; len1++)
+		;
+	for (len2 = 0; num2[len2]; len2++)
+		;
+	ptr = calloc(len1 + len2 + 1, sizeof(*ptr));
+	if (ptr == NULL)
 	{
 		_puts("Error");
 		exit(98);
 	}
-	size_1 = _strlen(argv[1]), size_2 = _strlen(argv[2]);
-	size_res = size_1 + size_2;
-	res = _calloc(size_res, sizeof(*res));
-	plc_v = prod = 0;
-	for (i = size_2 - 1; i >= 0; i--)
+	for (i = len1 - 1; i >= 0; i--)
 	{
-		k = size_res - 1 - plc_v++;
-		for (j = size_1 - 1; j >= 0; j--)
+		cy = 0;
+		n1 = num1[i] - '0';
+		for (j = len2 - 1; j >= 0; j--)
 		{
-			prod += res[k] + (argv[2][i] - '0') * (argv[1][j] - '0');
-			res[k--] = prod % 10, prod /= 10;
+			n2 = num2[j] - '0';
+			cy += ptr[i + j + 1] + (n1 * n2);
+			ptr[i + j + 1] = cy % 10;
+			cy /= 10;
 		}
-		res[k] = prod;
+		if (cy > 0)
+			ptr[i + j + 1] += cy;
 	}
-	if (prod > 0)
-		i = 0;
-	else
-		i = 1;
-	for (; i < size_res; i++)
-		_putchar(res[i] + '0');
-	_putchar('\n');
-	free(res);
+	for (i = 0; i < len1 + len2; i++)
+		ptr[i] += '0';
+	return (ptr);
+}
+
+/**
+ * main -entry point
+ * @argc: number of (passed) arguments
+ * @argv: the vector (array) of arguments passed
+ *
+ * Return: 0 on success, 98 on failure
+ */
+int main(int argc, char *argv[])
+{
+	char *result;
+
+	if (argc != 3 || !is_num(argv[1]) || !is_num(argv[2]))
+	{
+		_puts("Error");
+		return (98);
+	}
+	result = mul(argv[1], argv[2]);
+	_puts(result);
+	free(result);
 	return (0);
 }

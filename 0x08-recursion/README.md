@@ -8,5 +8,5 @@ Table of contents:
 6. 5 - sqrt recursion
 7. 6 - is prime number
 8. 100 - is palindrome
-
+9. 101 - wildcmp
 

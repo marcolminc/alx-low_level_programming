@@ -7,4 +7,5 @@
 5. 4. Free list
 6. 5. Free
 7. 6. Pop
+8. 7. Get node at index
 

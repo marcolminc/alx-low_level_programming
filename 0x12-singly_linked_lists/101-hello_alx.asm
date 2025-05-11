@@ -1,4 +1,4 @@
-section .note.GNU-stack noalloc noexec nowrite progbits
+; section .note.GNU-stack noalloc noexec nowrite progbits
 
 global main
 extern printf

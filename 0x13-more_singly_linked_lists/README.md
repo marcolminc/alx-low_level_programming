@@ -5,4 +5,5 @@
 3. 2. Add node
 4. 3. Add node at the end
 5. 4. Free list
+6. 5. Free
 

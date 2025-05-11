@@ -2,5 +2,6 @@
 ## Table of Contents:
 1. 0. Print list 
 2. 1. List length
-3.  2. Add node
+3. 2. Add node
+4. 3. Add node at the end
 

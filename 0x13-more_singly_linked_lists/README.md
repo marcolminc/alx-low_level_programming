@@ -11,4 +11,4 @@
 9.  8. Sum list
 10. 9. Insert
 11. 10. Delete at index
-
+12. 11.Reverse list

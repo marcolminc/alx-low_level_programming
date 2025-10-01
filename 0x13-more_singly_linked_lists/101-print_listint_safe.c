@@ -65,7 +65,7 @@ size_t add_hash(hash_t *hash, const listint_t *node)
 	if (hash->pos >= hash->size)
 		resize_hash(hash);
 	hash->hash[hash->pos++] = (listint_t *)node;
-	return (printf("[%p] %d\n", (void *)node, node->n));
+	return (printf("%d\n", node->n));
 }
 
 /**
@@ -84,7 +84,7 @@ bool is_hashed(hash_t *hash, listint_t *ptr)
 	for (i = 0; i < hash->pos; i++)
 		if (hash->hash[i] == ptr)
 		{
-			printf("-> [%p] %d", (void *)ptr, ptr->n);
+			printf("-> %d", ptr->n);
 			return (true);
 		}
 	return (false);

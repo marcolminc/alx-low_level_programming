@@ -65,7 +65,8 @@ size_t add_hash(hash_t *hash, const listint_t *node)
 	if (hash->pos >= hash->size)
 		resize_hash(hash);
 	hash->hash[hash->pos++] = (listint_t *)node;
-	return (printf("%d\n", node->n));
+	printf("%d\n", node->n);
+	return (1);
 }
 
 /**

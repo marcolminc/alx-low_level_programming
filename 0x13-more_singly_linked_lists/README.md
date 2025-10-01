@@ -12,3 +12,5 @@
 10. 9. Insert
 11. 10. Delete at index
 12. 11.Reverse list
+13. 12.Print (safe version)
+

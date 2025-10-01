@@ -4,7 +4,12 @@
 
 /* includes */
 #include <stdlib.h>
+#include <stdbool.h>
+#include <stdio.h>
 
+
+/* definitions */
+#define HASH_SIZE 64
 
 /**
  * struct listint_s - singly linked list
@@ -19,6 +24,22 @@ typedef struct listint_s
 	int n;
 	struct listint_s *next;
 } listint_t;
+
+/**
+ * struct addr_hash - address hash
+ * @hash: (array) hash table for the listint_t nodes
+ * @pos: current hash (node) entry index
+ * @size: current size of the hash table array
+ *
+ * Description: array implementation of hash table for storing
+ * listint_t linked list addresses
+ */
+typedef struct addr_hash
+{
+	listint_t **hash;
+	size_t pos;
+	size_t size;
+} hash_t;
 
 
 /* prototypes */
@@ -35,6 +56,7 @@ int sum_listint(listint_t *head);
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n);
 int delete_nodeint_at_index(listint_t **head, unsigned int index);
 listint_t *reverse_listint(listint_t **head);
+size_t print_listint_safe(const listint_t *head);
 
 
 #endif /* LISTS_H */

@@ -84,7 +84,7 @@ bool is_hashed(hash_t *hash, listint_t *ptr)
 	for (i = 0; i < hash->pos; i++)
 		if (hash->hash[i] == ptr)
 		{
-			printf("-> %d", ptr->n);
+			printf("-> %d\n", ptr->n);
 			return (true);
 		}
 	return (false);

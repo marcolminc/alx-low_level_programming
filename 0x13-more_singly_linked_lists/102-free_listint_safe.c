@@ -113,5 +113,6 @@ size_t free_listint_safe(listint_t **h)
 	}
 	free(hash->nodes);
 	free(hash);
+	*h = NULL;
 	return (nodes);
 }

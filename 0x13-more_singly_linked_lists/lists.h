@@ -25,6 +25,24 @@ typedef struct listint_s
 	struct listint_s *next;
 } listint_t;
 
+
+/**
+ * struct nodes_hash - the hash table for nodes of a listint_t linked list
+ * @nodes: the array for the nodes (the hash)
+ * @pos: entry position for current node being hashed
+ * @size: current hash table size
+ *
+ * Description: the hash table for determining whether
+ * a linked list has a cycle (loop)
+ */
+typedef struct nodes_hash
+{
+	listint_t **nodes;
+	size_t pos;
+	size_t size;
+} hash_tbl;
+
+
 /**
  * struct addr_hash - address hash
  * @hash: (array) hash table for the listint_t nodes
@@ -57,6 +75,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n);
 int delete_nodeint_at_index(listint_t **head, unsigned int index);
 listint_t *reverse_listint(listint_t **head);
 size_t print_listint_safe(const listint_t *head);
+size_t free_listint_safe(listint_t **h);
 
 
 #endif /* LISTS_H */

@@ -13,4 +13,5 @@
 11. 10. Delete at index
 12. 11.Reverse list
 13. 12.Print (safe version)
+14. 13.Free (safe version)
 

@@ -32,4 +32,5 @@
 3. 2.Add node: write a function that adds a new node at the beginning of a `dlistint_t` list
 4. 3.Add node at the end: write a function that adds a new node at the end of a `dlistint_t` list
 5. 4.Free list: write a function that frees a `dlistint_t` list
+6. 5.Get node at index: returns the nth node of a `dlistint_t` linked list
 

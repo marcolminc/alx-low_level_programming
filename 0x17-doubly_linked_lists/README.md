@@ -34,4 +34,5 @@
 5. 4.Free list: write a function that frees a `dlistint_t` list
 6. 5.Get node at index: returns the nth node of a `dlistint_t` linked list
 7. 6.Sum list: write a function that returns the sum of all the data(n) of a `dlistint_t` linked list
+8. 7.Insert at index: write a function that inserts a new node at a given position
 

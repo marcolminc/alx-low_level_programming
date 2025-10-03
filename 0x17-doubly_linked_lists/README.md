@@ -36,4 +36,5 @@
 7. 6.Sum list: write a function that returns the sum of all the data(n) of a `dlistint_t` linked list
 8. 7.Insert at index: write a function that inserts a new node at a given position
 9. 8.Delete at index: write a function that deletes the node at index of a `dlistint_t` linked list
+10. 10.Palindrome: find the largest palindrome made from the product of two 3-digit numbers
 

@@ -5,6 +5,8 @@
 /*includes */
 #include <stdlib.h>
 #include <stdio.h>
+#include <stdbool.h>
+#include <string.h>
 
 
 /* definitions */
@@ -38,6 +40,9 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index);
 int sum_dlistint(dlistint_t *head);
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n);
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index);
+char *uint_to_str(unsigned int);
+bool is_palindrome(unsigned int);
+bool write_palindrome(void);
 
 
 

@@ -49,4 +49,5 @@ using hash tables.
 1. 0.>>> ht = {}: write a function that creates a hash table
 2. 1.djb2: write a hash function implementing the djb2 algorithm
 3. 2.key -> index: write a function that gives you the index of a key
+4. 3.>>> ht['betty'] = 'cool': write a function that adds an element to the hash table
 

@@ -47,3 +47,5 @@ using hash tables.
 
 #### Tasks
 1. 0.>>> ht = {}: write a function that creates a hash table
+2. 1.djb2: write a hash function implementing the djb2 algorithm
+

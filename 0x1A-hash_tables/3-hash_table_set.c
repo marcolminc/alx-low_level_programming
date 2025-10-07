@@ -25,10 +25,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	node->key = strdup(key);
 	node->value = strdup(value);
+	node->next = NULL;
 	idx = key_index((unsigned char *)key, ht->size);
 	if (ht->array[idx] && ht->size == 1)
-		idx = 0;
-	node->next = ht->array[idx];
+		node->next = ht->array[idx];
 	ht->array[idx] = node;
 	return (1);
 }

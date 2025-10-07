@@ -16,17 +16,15 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_node_t *node;
-	unsigned long int idx;
 
 	if (!ht || !strlen(key))
 		return (0);
 	node = malloc(sizeof(*node));
 	if (!node)
 		return (0);
-	node->key = (char *)key;
+	node->key = strdup(key);
 	node->value = strdup(value);
-	idx = key_index((unsigned char *)key, ht->size);
-	node->next = ht->array[idx];
-	ht->array[idx] = node;
+	node->next = NULL;
+	ht->array[key_index((unsigned char *)key, ht->size)] = node;
 	return (1);
 }

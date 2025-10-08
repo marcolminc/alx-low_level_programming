@@ -50,4 +50,5 @@ using hash tables.
 2. 1.djb2: write a hash function implementing the djb2 algorithm
 3. 2.key -> index: write a function that gives you the index of a key
 4. 3.>>> ht['betty'] = 'cool': write a function that adds an element to the hash table
+5. 4.>>> ht['betty']: write a function that retrieves a value associated with a key
 

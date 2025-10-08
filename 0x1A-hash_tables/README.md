@@ -52,4 +52,5 @@ using hash tables.
 4. 3.>>> ht['betty'] = 'cool': write a function that adds an element to the hash table
 5. 4.>>> ht['betty']: write a function that retrieves a value associated with a key
 6. 5.>>> print(ht): write a function that prints a hash table
+7. 6.>>> del ht: write a function that deletes a hash table
 

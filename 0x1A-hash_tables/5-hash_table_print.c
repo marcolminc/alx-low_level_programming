@@ -31,8 +31,8 @@ void hash_table_print(const hash_table_t *ht)
 				printf(", ");
 			ptr = ptr->next;
 		}
-		for (j = i; j < ht->size; j++)
-			if (ht->array[i])
+		for (j = i + 1; j < ht->size; j++)
+			if (ht->array[j])
 			{
 				printf(", ");
 				break;

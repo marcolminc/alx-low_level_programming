@@ -21,3 +21,4 @@
 19. 0x13. C - More Singly Linked Lists
 20. 0x1A.C - Hash Tables
 21. 0x1C. C - makefiles
+22. 0x1E-search_algorithms

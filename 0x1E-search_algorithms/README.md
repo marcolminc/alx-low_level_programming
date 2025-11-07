@@ -45,3 +45,5 @@ int **allocate_map(int n, int m)
      return (map);
 }
 ```
+8. 7.Jump search: Write a function that searches for a value in a sorted array of integers using the Jump search algorithm
+

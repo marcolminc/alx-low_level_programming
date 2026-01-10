@@ -46,4 +46,6 @@ int **allocate_map(int n, int m)
 }
 ```
 8. 7.Jump search: Write a function that searches for a value in a sorted array of integers using the Jump search algorithm
+9. 8
+10. 9.Interpolation search: Write a function that searches for a value in a sorted array of integers using the interpolation search algorithm
 

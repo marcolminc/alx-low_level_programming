@@ -35,9 +35,9 @@ int interpolation_search(int *array, size_t size, int value)
 			if (array[p] == value)
 				return ((int)p);
 			if (array[p] < value)
-				lo = p;
+				lo = p + 1;
 			else
-				hi = p;
+				hi = p - 1;
 			p = lo + (double)(hi - lo) / (array[hi] - array[lo]) * (value - array[lo]);
 		} while (lo <= hi);
 	}

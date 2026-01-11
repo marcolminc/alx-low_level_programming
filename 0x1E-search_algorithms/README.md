@@ -49,3 +49,5 @@ int **allocate_map(int n, int m)
 9. 8
 10. 9.Interpolation search: Write a function that searches for a value in a sorted array of integers using the interpolation search algorithm
 11. 10.Exponential search: write a function that searches for a value in a sorted array of integers using the Exponential search algorithm
+12. 11.Advanced binary:
+13. 12.Jump search in a singly linked list

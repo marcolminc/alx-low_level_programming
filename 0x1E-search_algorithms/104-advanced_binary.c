@@ -52,7 +52,7 @@ int advanced_binary_helper(int *array, size_t left, size_t right, int value)
 	{
 		if (mid == 0)
 			return (-1);
-		return (advanced_binary_helper(array, left, mid - 1, value));
+		return (advanced_binary_helper(array, left, mid, value));
 	}
 
 	return (advanced_binary_helper(array, mid + 1, right, value));
